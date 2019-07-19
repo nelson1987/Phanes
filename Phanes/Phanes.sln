@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_Presentation", "0_Presentation", "{9BC9C712-C19B-45F1-80B0-0EB8E7407DC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phanes.Web", "Phanes.Web\Phanes.Web.csproj", "{54D0A562-7EA7-48F5-9E51-09E2E22F9223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phanes.Api", "Phanes.Api\Phanes.Api.csproj", "{ED7BBD08-226F-4E6B-9B70-FB4F6986FB54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54D0A562-7EA7-48F5-9E51-09E2E22F9223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D0A562-7EA7-48F5-9E51-09E2E22F9223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D0A562-7EA7-48F5-9E51-09E2E22F9223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D0A562-7EA7-48F5-9E51-09E2E22F9223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7BBD08-226F-4E6B-9B70-FB4F6986FB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7BBD08-226F-4E6B-9B70-FB4F6986FB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7BBD08-226F-4E6B-9B70-FB4F6986FB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7BBD08-226F-4E6B-9B70-FB4F6986FB54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54D0A562-7EA7-48F5-9E51-09E2E22F9223} = {9BC9C712-C19B-45F1-80B0-0EB8E7407DC2}
+		{ED7BBD08-226F-4E6B-9B70-FB4F6986FB54} = {9BC9C712-C19B-45F1-80B0-0EB8E7407DC2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {607EC978-455C-45CA-85E4-5D2A161F62D8}
+	EndGlobalSection
+EndGlobal

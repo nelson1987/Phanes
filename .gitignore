@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/.vs
+/Phanes/.vs
+/Phanes/Phanes.Api/bin/Debug/netcoreapp2.1
+/now-ui-dashboard-angular-master.zip
