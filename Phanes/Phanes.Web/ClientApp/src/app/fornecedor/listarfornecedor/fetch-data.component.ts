@@ -10,6 +10,7 @@ export class FetchDataComponent {
 
   constructor(http: HttpClient, @Inject('BASE_API') baseUrl: string) {
     console.log("Url", baseUrl);
+    console.log("Url", http);
     http.get<WeatherForecast[]>(baseUrl + 'api/SampleData').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));

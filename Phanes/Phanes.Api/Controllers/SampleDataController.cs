@@ -27,5 +27,17 @@ namespace Phanes.Api.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             }));
         }
+        [HttpPost]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<WeatherForecast>))]
+        public IActionResult Post()
+        {
+            var rng = new Random();
+            return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            }));
+        }
     }
 }
