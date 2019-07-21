@@ -12,3 +12,4 @@ D:\Phanes\Phanes\Phanes.Api\obj\Debug\netcoreapp2.1\Phanes.Api.AssemblyInfo.cs
 D:\Phanes\Phanes\Phanes.Api\obj\Debug\netcoreapp2.1\Phanes.Api.RazorTargetAssemblyInfo.cache
 D:\Phanes\Phanes\Phanes.Api\obj\Debug\netcoreapp2.1\Phanes.Api.dll
 D:\Phanes\Phanes\Phanes.Api\obj\Debug\netcoreapp2.1\Phanes.Api.pdb
+D:\Phanes\Phanes\Phanes.Api\bin\Debug\netcoreapp2.1\nlog.config

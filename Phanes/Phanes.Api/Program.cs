@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NLog.Web;
 
 namespace Phanes.Api
 {
@@ -14,11 +15,26 @@ namespace Phanes.Api
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args)
+                //.ConfigureLogging(logging =>
+                //{
+                //    logging.AddConsole(options => options.IncludeScopes = true);
+                //    logging.SetMinimumLevel(LogLevel.Information);
+                //    logging.AddFilter("Default", LogLevel.Error);
+                //    //logging.AddFilter(options => options.IncludeScopes = true);
+                //})
+                .Build()
+                .Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.SetMinimumLevel(LogLevel.Trace);
+                })
+                .UseNLog();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Phanes.Api.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,11 @@ namespace Phanes.Api.Controllers
     [ApiController]
     public class SampleDataController : ControllerBase
     {
+        //private readonly ILogger<SampleDataController> _logger;
+        //public SampleDataController()
+        //{
+
+        //}
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -27,17 +33,19 @@ namespace Phanes.Api.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             }));
         }
+
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(IEnumerable<WeatherForecast>))]
         public IActionResult Post()
         {
-            var rng = new Random();
-            return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            }));
+            throw new Exception();
+            //var rng = new Random();
+            //return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            //{
+            //    DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
+            //    TemperatureC = rng.Next(-20, 55),
+            //    Summary = Summaries[rng.Next(Summaries.Length)]
+            //}));
         }
     }
 }
